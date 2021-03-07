@@ -1,0 +1,46 @@
+
+<div class="login_form_container">
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+
+    <div class="field">
+      <%= f.label :email, class: 'login_form_label', value: 'E-mail' %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'login_form_inputs' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password, class: 'login_form_label', value: 'Senha' %>
+      <% if @minimum_password_length %>
+
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", class: 'login_form_inputs' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation, class: 'login_form_label', value: 'Confirmação da senha' %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'login_form_inputs' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Cadastrar-se", class: 'form_submit_button'  %>
+    </div>
+
+    <%- if controller_name != 'sessions' %>
+      <%= link_to "Logar", new_session_path(resource_name), class: 'register_new_user' %><br />
+    <% end %>
+
+  <% end %>
+
+</div>
+
+
+
+
+
+
+
+
+
+

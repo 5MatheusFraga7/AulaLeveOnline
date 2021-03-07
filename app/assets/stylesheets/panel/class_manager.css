@@ -1,0 +1,257 @@
+body {
+    background: white;
+    display: flex;
+    align-items: unset;
+    justify-content: center;
+}
+.container_parent {
+    position: relative;
+    background-color: #f4f2f3;
+    height: 500px;
+    width: 100%;
+    top: 250px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat;
+}
+nav {
+    position: fixed;
+    z-index: 1000;
+    background: #ffffff;
+    height: 120px;
+    width: 100%;
+    box-shadow: 3px solid gray;
+    border: 0.5px solid #909090;
+    padding: 1px;
+    box-shadow: 1px 1px 20px 0px;
+}
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+/*a.active, a:hover {
+    background: #58cde8;
+    transition: .5s;
+}*/
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+.home_logo {
+    height: 190px;
+    width: 538px;
+    margin-bottom: 20px;
+    float: left;
+    bottom: 34px;
+    position: relative;
+}
+
+.fa, .fas {
+    font-weight: 1000;
+    background: #4dcbe3;
+    color: #fff2f2;
+}
+
+.container_tutorial {
+    height: 350px;
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #337ab7
+    /*transition: 0.5s;*/
+}
+.tutorial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /*transition: 0.5s;*/
+}
+
+.container_tutorial:hover {
+    background-color: #ed6f18;
+    color: white;
+}
+
+.tutorial_img {
+    height: 158px;
+    width: 161px;
+    margin-bottom: 15px;
+    /*transition: 0.5s;*/
+}
+.tutorial_hover {
+    height: 158px;
+    width: 161px;
+/*    transition: 0.5s; */
+    display: none;
+
+}
+
+.tutorial_introduction {
+    position: absolute;
+    bottom: 27%;
+    margin-top: 24px;
+    font-weight: 600;     
+}
+#intro-label {
+    position: absolute;
+    font-size: 20px;
+    bottom: 26%;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .tutorial_introduction {
+        position: absolute;
+        bottom: 0%;
+        margin-top: 24px;        
+    }
+ 
+}
+
+@media (max-width: 858px){
+
+    .home_logo {
+        height: 93px;
+        width: 263px;
+        margin-bottom:20px;
+        float:left
+    }
+
+    .container_parent {
+        position: relative;
+        background-color: #f4f2f3;
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+        top: 192px;
+    }
+    .tutorial_img {
+        height: 98px;
+        width: 101px;
+    /*transition: 0.5s;*/
+    }
+    .container_tutorial {
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 10px;
+        position: relative;
+        display: flex;
+    }
+    .tutorial {
+        position: relative;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #5cd0e5;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover, a.active {
+        background: none;
+        color: #5434af;
+        background-color: #88f0d3;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    #intro-label  {
+        position: absolute;
+        font-size: 15px;
+        bottom: 1%;      
+    }
+} 
+
+@media (max-width: 500px){
+    .home_logo {
+        height: 74px;
+        width: 230px;
+        margin-bottom: 20px;
+        float: left;
+        position: relative;
+    }
+}
+@media (max-width: 375px){
+    .home_logo {
+        height: 74px;
+        width: 230px;
+        margin-bottom: 20px;
+        float: left;
+        position: relative;
+    }
+}
+
+

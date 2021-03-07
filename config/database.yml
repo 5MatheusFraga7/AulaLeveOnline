@@ -1,0 +1,4 @@
+development:
+  adapter: postgresql
+  database: aulaleve
+  pool: 5
