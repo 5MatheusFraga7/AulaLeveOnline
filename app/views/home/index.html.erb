@@ -55,8 +55,14 @@
 		</div>
 		
 		<div class = 'container_tutorial' id = 'tutorial_3' onmouseover="showHoverImg(3)" onmouseout="hideHoverImg(3)" >
-			<div class = 'tutorial' > <%= image_tag "tutorial.png", :class => "tutorial_img", :id => "tutorial_img3" %> </div>
-			<div class = 'tutorial' > <%= image_tag "tutorial-hover.png", :class => "tutorial_hover", :id => "tutorial_hover_img3" %> </div>	
+				<%= link_to workshops_path do %>
+					<%= image_tag "tutorial.png", :class => "tutorial_img", :id => "tutorial_img3" %> 
+				<% end %>
+
+				<%= link_to workshops_path do %>
+					<%= image_tag "tutorial-hover.png", :class => "tutorial_hover", :id => "tutorial_hover_img3" %> 
+				<% end %>				
+
 			<h2 id="intro-label">OFICINAS</h2>	
 		</div>
 	</div>

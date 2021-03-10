@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.container_workshops {
+    display: flex;
+    height: 500px;
+    width: 1200px;
+    position: relative;
+    margin-top: 142px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_label_workshops {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+}
+
+.label_workshops {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px;
+    position: relative;
+    color: #307883;
+    font-weight: 600;
+}
+.container_choices_workshops {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 350px;
+}
+
+.choice_workshop {
+    position: relative;
+    height: 75%;
+    width: 40%;
+    margin: 10px;
+    margin-top: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 11px #b9b9b9;
+}
+#container_show_wokshops {
+    background-color: #7fd5f2;
+}
+
+#container_create_wokshops {
+    background-color: #10BC98;
+}
+
+#container_show_wokshops:hover {
+    background-color: #68b2cb;
+}
+
+#container_create_wokshops:hover  {
+    background-color: #0c8e72;
+}
+
+
+#label_create_workshops {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    position: relative;
+    font-weight: 600;
+    bottom: 60px;
+
+}
+
+#icon-more {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90px;
+    position: absolute;
+    font-weight: 600;
+    bottom: 28%
+}
+
+.icon-eye-white {
+    position: absolute;
+    height: 89px;
+    width: 80px;
+    bottom: 32%;
+}
+
+.list-workshops-container {
+    display: none;
+    position: relative;
+    height: 800px;
+    width: 1200px;
+    margin-top: 250px;
+    background-color: tomato;
+    margin-bottom: 40px;
+}
+
+.create-new-workshops-container {
+    display:none;
+}
+
+.list-workshops {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+}
+
+#label_list_workshops {
+    position: relative;
+    font-size: 100px;
+    background-color: white;
+    height: 200px;
+    top: 24px;
+    cursor: pointer;
+}

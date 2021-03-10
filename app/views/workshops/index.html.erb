@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Oficinas</title>
+</head>
+
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+
+		<label class="logo" id = "home" >
+
+			<%= link_to home_path do %>
+   				<%= image_tag "LogoOnline.png", class: "home_logo" %>
+			<% end %>
+
+		</label>
+		<ul>
+			<li><a class="active" href="#">Início</a></li>
+			<li><a><%= link_to 'Sair', destroy_user_session_path, method: :delete %></a></li>
+			<li><a href="#">Serviços</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</nav>
+
+	<body>
+
+		<div class="container_workshops" id = "workshops-container">
+			<div class="container_label_workshops">
+					<label class="label_workshops">
+						Cadastre aqui suas Oficinas de Estudo para acompanhar seu desempenho. Os alunos respondem a fichas de avaliação sobre a atividade. Essas avaliações podem ser acessadas diretamente pelos alunos utilizando o link gerado ao cadastrar uma Oficina. Outra opção é imprimir as fichas de avaliação disponibilizados e, após, inserir os dados.
+						Vamos descobrir como nos saímos?
+				   </label>		
+			</div>	
+
+			<div class="container_choices_workshops">
+				<div class="choice_workshop" id="container_show_wokshops" onclick = "showWorkshos();">
+					<h1 id = "label_create_workshops"  >Ver oficinas</h1>
+					<%= image_tag "eye-white-icon.png", class: 'icon-eye-white' %>					
+				</div>
+				<div class="choice_workshop" id = "container_create_wokshops" onclick = "createWorkshos();">
+					<h1 id = "label_create_workshops">Criar oficinas</h1>
+					<h1 id = "icon-more">+</h1>	
+				</div>				
+			</div>
+				
+		</div>	
+
+		<div class="list-workshops-container">
+			<div class="list-workshops" >
+				<label id = "label_list_workshops" onclick = "backToChoiceWorkshops();">Voltar</label>				
+			</div>			
+		</div>	
+		<div class="create-new-workshops-container">
+			<div class="list-workshops" >
+				<label id = "label_list_workshops" onclick = "backToChoiceWorkshops();">Voltar</label>				
+			</div>	
+		</div>	
+
+	</body>
+	
+</html>
