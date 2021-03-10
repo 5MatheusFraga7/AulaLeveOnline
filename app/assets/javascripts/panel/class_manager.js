@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+	
 
 });
 
@@ -81,4 +81,33 @@ function hideHoverImg(index_img) {
 		img_to_show.style.display = 'block';	
 	}
 
+}
+
+function showWorkshos() {
+
+	$("#workshops-container").fadeOut();
+
+	setTimeout(function(){ 
+		$(".list-workshops-container").fadeIn(); 
+	}, 500);
+	
+}
+
+function createWorkshos() {
+	$("#workshops-container").fadeOut();
+
+	setTimeout(function(){ 
+		$(".list-workshops-container").fadeIn(); 
+	}, 500);
+}
+
+function backToChoiceWorkshops() {
+
+	$(".list-workshops-container").fadeOut();
+	$(".create-new-workshops-container").fadeOut();
+
+	setTimeout(function(){ 
+		$("#workshops-container").fadeIn(); 
+	}, 500);
+	
 }
