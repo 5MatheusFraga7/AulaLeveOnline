@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-	get '/aula/', to: 'aula#index'
+
+    get '/', to: 'home#index'
+
+    get '/home', to: 'home#index'
+
 	get '/users/sign_in', to: 'home#index'
 	get '/users/', to: 'home#index'
 

@@ -1,0 +1,29 @@
+.link_to_introduciton {
+    position: absolute;
+    font-size: 20px;
+    bottom: 26%;
+    color:#337ab7;
+}
+.link_to_introduciton:hover {
+	color:#337ab7;
+	background-color: none;
+}
+.container_introduction {
+    top: 140px;
+    position: relative;
+    height: 499px;
+    width: 90%;
+    background: #F4F2F3;
+    color: #337ab7;
+    font-size: 27px;
+    padding: 5px;
+    border-radius: 7px;
+}
+.label_introduction {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: white;
+    height: 40px;
+    margin-top: 14px;
+}
