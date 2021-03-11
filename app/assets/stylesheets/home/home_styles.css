@@ -6,15 +6,15 @@
 
 .login_form_container {
     position: relative;
-    height: 575px;
+    height: 90vh;
     width: 609px;
-    margin-top: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-style: groove;
     border-radius: 9px;
-    box-shadow: 2px 3px 5px #e8e4e4;
+    margin-top: 20px;
+
 }
 
 .new_user {
@@ -36,7 +36,7 @@
     height: 123px;
     width: 134px;
     position: relative;
-    filter: hue-rotate(90deg);
+
 }
 
 .login_form_label {
@@ -45,7 +45,7 @@
     margin-bottom: 19px;
     margin-top: 22px;
     position: relative;
-    color: #236f74;
+    color: #4cc7de;
     font-size: 20px;
 }
 
@@ -67,7 +67,7 @@
     border: 5px;
     border-radius: 6px;
     cursor: pointer;
-    background-color: #236e72;
+    background-color: #4dcae2;
     padding: 0px;
     font-size: 20px;
     font-weight: 800;
@@ -85,7 +85,7 @@
     position: relative;
     /*font-family: 'Mukta', sans-serif;*/
     font-weight: 600;
-    color: #236e72;
+    color: #50cfe6;
     font-size: 22px;
     margin-top: 5px;
     transition: 0.5s;

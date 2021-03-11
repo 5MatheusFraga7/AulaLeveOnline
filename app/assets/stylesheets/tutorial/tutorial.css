@@ -1,3 +1,5 @@
+
+
 .link_to_introduciton {
     position: absolute;
     font-size: 20px;
@@ -11,7 +13,7 @@
 .container_introduction {
     top: 140px;
     position: relative;
-    height: 499px;
+    min-height: 100vh;
     width: 90%;
     background: #F4F2F3;
     color: #337ab7;
@@ -26,4 +28,77 @@
     background: white;
     height: 40px;
     margin-top: 14px;
+}
+.videos {
+    display: none;
+    transition: 1.5s;
+}
+
+.tutorial_parent_video {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.video_picker_container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.controls_video_picker {
+    position: relative;
+    height: 80px;
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.picker {
+    position: relative;
+    height: 80px;
+    width: 30%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 11px #b9b9b9;
+    cursor: pointer;
+    transition: 0.8s;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#33c5de;
+
+}
+.picker:hover {
+    background: #f4f2f3;
+    color: #19a9c5;
+}
+.introduction-control {
+
+}
+
+
+.overview-control {
+
+}
+.tutorial-control {
+
+}
+
+iframe {
+    position: relative;
+    height: 558px;
+    width: 1000px;
+    margin: 31px;
+    border-radius: 20px;
 }

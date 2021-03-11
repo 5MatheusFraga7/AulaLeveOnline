@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-	
+	$("#video_1").fadeIn();
+})	
 
-});
 
 function showHoverImg(index_img) {
 
@@ -110,4 +110,39 @@ function backToChoiceWorkshops() {
 		$("#workshops-container").fadeIn(); 
 	}, 500);
 	
+}
+
+function changeVideoPicker(video) {
+
+	if (video == 1) {
+
+		$("#video_2").fadeOut();
+		$("#video_3").fadeOut();
+
+		setTimeout(function(){ 
+			$("#video_1").fadeIn();	 
+		}, 500);				
+	}
+	else if (video == 2) {
+
+		$("#video_1").fadeOut();		
+		$("#video_3").fadeOut();	
+
+		setTimeout(function(){ 
+			$("#video_2").fadeIn();	 
+		}, 500);			
+	}
+	else if (video == 3) {
+		$("#video_1").fadeOut();		
+		$("#video_2").fadeOut();
+
+		setTimeout(function(){ 
+			$("#video_3").fadeIn();	 
+		}, 500);
+
+	}
+	else {
+		$("#video_1").fadeIn();			
+	}
+
 }
