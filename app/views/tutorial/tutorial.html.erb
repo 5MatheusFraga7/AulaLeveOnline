@@ -3,6 +3,7 @@
 <head>
 
 	<title>Introduão</title>
+
 </head>
 
 	<nav>
@@ -14,7 +15,7 @@
 		<label class="logo" id = "home" >
 
 			<%= link_to home_path do %>
-   				<%= image_tag "LogoOnline.png", class: "home_logo" %>
+   				<%= image_tag "LogoAtualizadoDef.png", class: "home_logo" %>
 			<% end %>
 
 		</label>
@@ -31,8 +32,29 @@
 		<div class="container_introduction">
 			<div class="label_introduction"> Tutorial</div>
 
+			<div class="video_picker_container">
+				<div class="controls_video_picker">	
+					<div class="picker introduction-control" onclick = "changeVideoPicker(1)"><h2>1 - Introdução</h2></div>
+					<div class="picker overview-control" onclick = "changeVideoPicker(2)"><h2>2 - Visão geral</h2></div>	
+					<div class="picker tutorial-control" onclick = "changeVideoPicker(3)"><h2>3 - Tutorial</h2></div>	
+				</div>				
+			</div>			
 			
+			<div class="tutorial_parent_video">
+		      	<div class="videos" id = "video_1">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/gv48bv6tIO8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+					</iframe>			      		
+		      	</div>
 
+		      	<div class="videos" id = "video_2"> 
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/BD0Km-UygIs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>						
+					</iframe>			      		
+		      	</div>
+
+		      	<div class="videos" id = "video_3">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/xXOHqYRAXxk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			      		
+		      	</div>
+			</div>
 		</div>		
 
 	</body>
