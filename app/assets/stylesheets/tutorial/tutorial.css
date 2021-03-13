@@ -64,19 +64,17 @@
 .picker {
     position: relative;
     height: 80px;
-    width: 30%;
+    width: 100%;
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 0 11px #b9b9b9;
     cursor: pointer;
-    transition: 0.8s;
+    transition: 0.3s;
     text-align: center;
     font-weight: 600;
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:#33c5de;
+    color: #33c5de;
 
 }
 .picker:hover {
@@ -87,12 +85,16 @@
 
 }
 
-
 .overview-control {
 
 }
 .tutorial-control {
 
+}
+
+.picker-selected {
+    background: #f4f2f3;
+    color: #19a9c5;  
 }
 
 iframe {

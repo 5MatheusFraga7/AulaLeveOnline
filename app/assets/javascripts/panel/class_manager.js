@@ -1,6 +1,11 @@
 $(document).ready(function(){
 
 	$("#video_1").fadeIn();
+
+
+	// $("p").unbind("click", alertMe);
+	// $("p").unbind("click", alertMe);
+
 })	
 
 
@@ -114,7 +119,17 @@ function backToChoiceWorkshops() {
 
 function changeVideoPicker(video) {
 
+	$(".picker").unbind("click", showVideo(video));
+
+}
+
+function showVideo(video) {
+
 	if (video == 1) {
+
+  		$(".introduction-control").addClass("picker-selected");
+  		$(".overview-control").removeClass("picker-selected");
+  		$(".tutorial-control").removeClass("picker-selected");
 
 		$("#video_2").fadeOut();
 		$("#video_3").fadeOut();
@@ -125,6 +140,10 @@ function changeVideoPicker(video) {
 	}
 	else if (video == 2) {
 
+  		$(".introduction-control").removeClass("picker-selected");
+  		$(".overview-control").addClass("picker-selected");
+  		$(".tutorial-control").removeClass("picker-selected");		
+
 		$("#video_1").fadeOut();		
 		$("#video_3").fadeOut();	
 
@@ -133,6 +152,11 @@ function changeVideoPicker(video) {
 		}, 500);			
 	}
 	else if (video == 3) {
+
+  		$(".introduction-control").removeClass("picker-selected");
+  		$(".overview-control").removeClass("picker-selected");
+  		$(".tutorial-control").addClass("picker-selected");
+
 		$("#video_1").fadeOut();		
 		$("#video_2").fadeOut();
 
