@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Oficinas</title>
+</head>
+
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+
+		<label class="logo" id = "home" >
+
+			<%= link_to home_path do %>
+   				<%= image_tag "LogoAtualizadoDef.png", class: "home_logo" %>
+			<% end %>
+
+		</label>
+		<ul>
+			<li><a class="active" href="#">Início</a></li>
+			<li><a><%= link_to 'Sair', destroy_user_session_path, method: :delete %></a></li>
+			<li><a href="#">Serviços</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</nav>
+
+	<body>
+		
+		<div class="container">
+			<div class="container jumbotrom container_form_workshops">
+				<div class="container_form_title">
+					<label id = "label_form_title">Registre sua oficina</label>
+				</div>
+				<form class="needs-validation" novalidate method="POST" action="action_page.php">
+				  <div class="form-row">
+				    <div class="col-md-4 mb-3">
+				      <label for="validationCustom01">Título</label>
+				      <input type="text" class="form-control" id="validationCustom01" placeholder="Ex.: 15/03/2018 - Turma 101" required>
+				      <div class="valid-feedback">
+				        Correto!
+				      </div>
+				    </div>
+				    <div class="col-md-4 mb-3">
+				      <label for="validationCustom02">Data</label>
+				      <input type="date" class="form-control" id="validationCustom02" required>
+				      <div class="valid-feedback">
+				        Correto!
+				      </div>
+				    </div>
+				    <div class="col-md-4 mb-3">
+				      <label for="validationCustomUsername">Disciplina</label>
+				      <div class="input-group">
+				        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Disciplina" aria-describedby="inputGroupPrepend" required>
+				        <div class="invalid-feedback">
+				          Por favor, escolha a disciplina que foi aplicada
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="form-row">
+				    <div class="col-md-6 mb-3">
+				      <label for="validationCustom03">Cidade</label>
+				      <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
+				      <div class="invalid-feedback">
+				        Por favor, informe uma cidade válida.
+				      </div>
+				    </div>
+				    <div class="col-md-3 mb-3">
+				      <label for="validationCustom04">Estado</label>
+				      <input type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
+				      <div class="invalid-feedback">
+				        Por favor, informe um estado válido.
+				      </div>
+				    </div>
+				  </div>
+				  <button class="btn btn-success pull-right" type="submit">Enviar</button>
+				</form>				
+			</div>
+		</div>
+
+	</body>
+	
+</html>

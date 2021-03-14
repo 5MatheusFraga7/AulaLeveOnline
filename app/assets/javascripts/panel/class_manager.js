@@ -88,22 +88,17 @@ function hideHoverImg(index_img) {
 
 }
 
-function showWorkshos() {
+function showWorkshops() {
 
 	$("#workshops-container").fadeOut();
-
-	setTimeout(function(){ 
-		$(".list-workshops-container").fadeIn(); 
-	}, 500);
+	 window.location.href = 'list_workshops';
 	
 }
 
-function createWorkshos() {
-	$("#workshops-container").fadeOut();
+function createWorkshops() {
 
-	setTimeout(function(){ 
-		$(".list-workshops-container").fadeIn(); 
-	}, 500);
+	$("#workshops-container").fadeOut();
+	 window.location.href = 'create_workshops';
 }
 
 function backToChoiceWorkshops() {
