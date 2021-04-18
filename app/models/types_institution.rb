@@ -1,0 +1,2 @@
+class TypesInstitution < ApplicationRecord
+end

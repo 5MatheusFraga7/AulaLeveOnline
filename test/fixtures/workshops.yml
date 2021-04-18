@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  observation: MyString
+  institution: MyString
+  types_institution: one
+  evaluation_link: MyText
+  state: one
+  ministry_at: 2021-04-17 17:44:20
+
+two:
+  user: two
+  observation: MyString
+  institution: MyString
+  types_institution: two
+  evaluation_link: MyText
+  state: two
+  ministry_at: 2021-04-17 17:44:20

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Oficinas</title>
+</head>
+
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+
+		<label class="logo" id = "home" >
+
+			<%= link_to home_path do %>
+   				<%= image_tag "LogoAtualizadoDef.png", class: "home_logo" %>
+			<% end %>
+
+		</label>
+		<ul>
+			<li><a class="active" href="#">Início</a></li>
+			<li><a><%= link_to 'Sair', destroy_user_session_path, method: :delete %></a></li>
+			<li><a href="#">Serviços</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</nav>
+
+	<div class="container-list-workshops">
+	  <table class="table">
+		    <thead class="table-info">
+				<tr>
+					<th>Título</th>
+					<th>Data</th>
+					<th>Instituição</th>
+					<th>Disciplina</th>
+					<th></th>		        
+				</tr>
+		    </thead>
+		    <tbody>
+				<tr class="table">
+					<td>Aula de cinemática - 3M</td>
+					<td>24/09/1998</td>
+					<td>Instituto federal de Gravataí</td>
+					<td>Física</td>	
+					<td> 						
+
+						 <%= image_tag "pencil-icon.png", class: "pencil-icon", id: "pencil_icon", onclick: "editWorkshop('pencil')" %>
+						 <%= image_tag "remove-icon.jpg", class: "remove-icon", id: "remove_icon", onclick: "editWorkshop('remove')"%>
+						 <%= image_tag "grafico-icon.png", class: "grafico-icon", id:"grafico_icon", onclick: "editWorkshop('grafico')" %>
+
+					</td>		        
+				</tr>      
+				<tr class="table">
+					<td>Aula de Poliedros - 3M</td>
+					<td>24/01/2021</td>
+					<td>Instituto federal de Gravataí</td>
+					<td>Matemática</td>		
+					<td> 
+
+						 <%= image_tag "pencil-icon.png", class: "pencil-icon", id: "pencil_icon", onclick: "editWorkshop('pencil')" %>
+						 <%= image_tag "remove-icon.jpg", class: "remove-icon", id: "remove_icon", onclick: "editWorkshop('remove')"%>
+						 <%= image_tag "grafico-icon.png", class: "grafico-icon", id:"grafico_icon", onclick: "editWorkshop('grafico')" %>
+					</td>		        		        	        
+				</tr>
+		    </tbody>
+	  </table>		
+	</div>
+	
+</html>

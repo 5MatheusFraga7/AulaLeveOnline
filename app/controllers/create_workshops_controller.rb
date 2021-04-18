@@ -1,0 +1,2 @@
+class CreateWorkshopsController < ApplicationController
+end

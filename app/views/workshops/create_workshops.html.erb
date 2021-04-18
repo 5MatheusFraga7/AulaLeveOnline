@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Oficinas</title>
+</head>
+
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+
+		<label class="logo" id = "home" >
+
+			<%= link_to home_path do %>
+   				<%= image_tag "LogoAtualizadoDef.png", class: "home_logo" %>
+			<% end %>
+
+		</label>
+		<ul>
+			<li><a class="active" href="#">Início</a></li>
+			<li><a><%= link_to 'Sair', destroy_user_session_path, method: :delete %></a></li>
+			<li><a href="#">Serviços</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</nav>
+
+	<body>
+		
+		<div class="container">
+
+			<%= csrf_meta_tags %>
+			<div class="container jumbotrom container_form_workshops">
+				<div class="container_form_title">
+					<label id = "label_form_title">Registre sua oficina</label>
+				</div>
+				<form class="needs-validation" novalidate method="POST" >
+				  <div class="form-row">
+				    <div class="col-md-4 mb-3">
+				      <label for="observation_input">Observação</label>
+				      <input name = "workshops_title" type="text" class="form-control" id="observation_input" placeholder="Ex.: 15/03/2018 - Turma 101" required>
+				      <div class="valid-feedback">
+				        Correto!
+				      </div>
+				    </div>
+				    <div class="col-md-4 mb-3">
+				      <label for="ministry_at_input">Data</label>
+				      <input type="date" class="form-control" id="ministry_at_input" required>
+				      <div class="valid-feedback">
+				        Correto!
+				      </div>
+				    </div>
+				    <div class="col-md-4 mb-3">
+				      <label for="matter_input">Disciplina</label>
+				      <div class="input-group">
+				        <input type="text" class="form-control" id="matter_input" placeholder="Disciplina" aria-describedby="inputGroupPrepend" required>
+				        <div class="invalid-feedback">
+				          Por favor, escolha a disciplina que foi aplicada
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="form-row">
+				    <div class="col-md-6 mb-3">
+				      <label for="institution_input">Instituição</label>
+				      <input type="text" class="form-control" id="institution_input" placeholder="Instituição" required>
+				      <div class="invalid-feedback">
+				        Por favor, informe uma instituição válida.
+				      </div>
+				    </div>
+
+				    <div class="col-md-6 mb-3">
+				      <label for="type_institution_input">Tipo de instituição</label>
+				      <select id="type_institution_input" class="form-control">
+				        <option selected>Escolher...</option>
+					     <% @types_institution.each do |type| %>
+					       <option value = <%= type.id %>><%= type.title %></option>
+					     <% end %>
+				      </select>
+				    </div>
+
+				    <div class="form-group col-md-4">
+				      <label for="state_input">Estado</label>
+				      <select id="state_input" class="form-control">
+				        <option selected>Escolher...</option>
+					     <% @states.each do |state| %>
+					       <option value = <%= state.id %>><%= state.nome %></option>
+					     <% end %>
+				      </select>
+				    </div>
+				  </div>
+				  <button class="btn btn-success pull-right" type="button" onclick="saveNewWorkshop()">Enviar</button>
+				</form>				
+			</div>
+		</div>
+
+	</body>
+	
+</html>
