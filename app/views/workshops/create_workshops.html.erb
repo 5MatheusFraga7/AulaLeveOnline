@@ -29,15 +29,17 @@
 	<body>
 		
 		<div class="container">
+
+			<%= csrf_meta_tags %>
 			<div class="container jumbotrom container_form_workshops">
 				<div class="container_form_title">
 					<label id = "label_form_title">Registre sua oficina</label>
 				</div>
-				<form class="needs-validation" novalidate method="POST" action="action_page.php">
+				<form class="needs-validation" novalidate method="POST" >
 				  <div class="form-row">
 				    <div class="col-md-4 mb-3">
 				      <label for="validationCustom01">Título</label>
-				      <input type="text" class="form-control" id="validationCustom01" placeholder="Ex.: 15/03/2018 - Turma 101" required>
+				      <input name = "workshops_title" type="text" class="form-control" id="validationCustom01" placeholder="Ex.: 15/03/2018 - Turma 101" required>
 				      <div class="valid-feedback">
 				        Correto!
 				      </div>
@@ -75,7 +77,7 @@
 				      </div>
 				    </div>
 				  </div>
-				  <button class="btn btn-success pull-right" type="submit">Enviar</button>
+				  <button class="btn btn-success pull-right" type="button" onclick="saveNewWorkshop()">Enviar</button>
 				</form>				
 			</div>
 		</div>

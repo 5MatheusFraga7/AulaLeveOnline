@@ -2,10 +2,6 @@ $(document).ready(function(){
 
 	$("#video_1").fadeIn();
 
-
-	// $("p").unbind("click", alertMe);
-	// $("p").unbind("click", alertMe);
-
 })	
 
 

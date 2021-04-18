@@ -144,6 +144,25 @@ nav ul li a {
     font-size: 20px;
     bottom: 26%;
 }
+.pencil-icon {
+
+    padding: 5px;
+    width: 29px;
+    cursor: pointer;
+
+}
+.remove-icon {
+    padding: 5px;
+    width:  29px;
+    cursor: pointer;
+}
+
+.grafico-icon {
+    padding: 5px;
+    width:  29px;
+    cursor: pointer;
+  
+}
 
 @media (max-width: 952px){
     label.logo{

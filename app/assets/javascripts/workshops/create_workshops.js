@@ -15,3 +15,23 @@
     });
   }, false);
 })();
+
+function saveNewWorkshop() {
+
+ var title  = document.getElementById("validationCustom01").value;
+ var date   = document.getElementById("validationCustom02").value;
+ var matter = document.getElementById("validationCustomUsername").value;
+ var cidade = document.getElementById("validationCustom03").value;
+ var estado = document.getElementById("validationCustom04").value;
+
+  $.ajax("workshops/create.json?title=" +title+"&date="+date)
+  .done(function(data) {
+      console.log(data);
+    })
+    .fail(function() {
+      console.log( "error" );
+    });
+}
+
+
+
