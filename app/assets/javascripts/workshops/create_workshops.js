@@ -1,3 +1,5 @@
+var x = '';
+
 (function() {
   'use strict';
   window.addEventListener('load', function() {
@@ -18,19 +20,22 @@
 
 function saveNewWorkshop() {
 
- var title  = document.getElementById("validationCustom01").value;
- var date   = document.getElementById("validationCustom02").value;
- var matter = document.getElementById("validationCustomUsername").value;
- var cidade = document.getElementById("validationCustom03").value;
- var estado = document.getElementById("validationCustom04").value;
+ var type_institution = document.getElementById("type_institution_input").value;
+ var observation      = document.getElementById("observation_input").value;
+ var ministry_at      = document.getElementById("ministry_at_input").value;
+ var matter           = document.getElementById("matter_input").value;
+ var institution      = document.getElementById("institution_input").value;
+ var state            = $('#state_input :selected').val();
 
-  $.ajax("workshops/create.json?title=" +title+"&date="+date)
-  .done(function(data) {
-      console.log(data);
-    })
-    .fail(function() {
+  $.ajax("workshops/create.json?type_institution=" +type_institution+"&observation="+observation+"&ministry_at="+ministry_at+"&matter="+matter+"&institution="+institution+"&state="+state)
+    .done(function(data) {
+      console.log(data);   
+      })
+    .fail(function(data) {
       console.log( "error" );
-    });
+      console.log(data);
+  });
+
 }
 
 
