@@ -38,33 +38,24 @@
 				</tr>
 		    </thead>
 		    <tbody>
-				<tr class="table">
-					<td>Aula de cinemática - 3M</td>
-					<td>24/09/1998</td>
-					<td>Instituto federal de Gravataí</td>
-					<td>Física</td>	
-					<td> 						
+			    <% @workshops.each do |workshop| %>	  
+					<tr class="table">
+						<td>  <%= workshop.observation %> </td>
+						<td>  <%= workshop.ministry_at.to_s(:data_br) %> </td>
+						<td>  <%= workshop.institution %> </td>
+						<td>  <%= workshop.matter %>      </td>
 
-						 <%= image_tag "pencil-icon.png", class: "pencil-icon", id: "pencil_icon", onclick: "editWorkshop('pencil')" %>
-						 <%= image_tag "remove-icon.jpg", class: "remove-icon", id: "remove_icon", onclick: "editWorkshop('remove')"%>
-						 <%= image_tag "grafico-icon.png", class: "grafico-icon", id:"grafico_icon", onclick: "editWorkshop('grafico')" %>
+						<td> 						
+							<%= image_tag "remove-icon.jpg", class: "remove-icon", id: "remove_icon", onclick: "editWorkshop("+workshop.id.to_s+", 'remove')"%>
+							<%= image_tag "grafico-icon.png", class: "grafico-icon", id:"grafico_icon",onclick: "editWorkshop("+workshop.id.to_s+", 'grafico')" %>
 
-					</td>		        
-				</tr>      
-				<tr class="table">
-					<td>Aula de Poliedros - 3M</td>
-					<td>24/01/2021</td>
-					<td>Instituto federal de Gravataí</td>
-					<td>Matemática</td>		
-					<td> 
-
-						 <%= image_tag "pencil-icon.png", class: "pencil-icon", id: "pencil_icon", onclick: "editWorkshop('pencil')" %>
-						 <%= image_tag "remove-icon.jpg", class: "remove-icon", id: "remove_icon", onclick: "editWorkshop('remove')"%>
-						 <%= image_tag "grafico-icon.png", class: "grafico-icon", id:"grafico_icon", onclick: "editWorkshop('grafico')" %>
-					</td>		        		        	        
-				</tr>
+						</td>		        
+					</tr> 			       	
+			    <% end %>     
 		    </tbody>
-	  </table>		
+	  </table>
+	  <div class="go_to_create_workshops" onclick="goTocreateWorkshops();">+</div>
+	  <button id = "myBtn">CLIQUE AQUI</button>		
 	</div>
 	
 </html>

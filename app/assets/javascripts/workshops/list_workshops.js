@@ -1,10 +1,11 @@
 
 $(document).ready(function(){
 
+  // document.getElementById("myBtn").addEventListener("click", displayDate);
 
 })	
 
-function editWorkshop(type_edition) {
+function editWorkshop(workshop_id, type_edition) {
 
   if (type_edition == 'pencil') {
 
@@ -13,8 +14,7 @@ function editWorkshop(type_edition) {
   }
   else if (type_edition == 'remove') {
 
-  		console.log('Belo2');
-
+      removeWorkshop(workshop_id);
   }
   else if (type_edition == 'grafico') {
 
@@ -24,5 +24,24 @@ function editWorkshop(type_edition) {
 
 }
 
+function goTocreateWorkshops() {
+	window.location.href = 'create_workshops';
+}
+
+function removeWorkshop(workshop_id) {
+
+   $.ajax("workshops/remove.json?workshop_id="+workshop_id)
+    .done(function(data) {
+      console.log(data);   
+      })
+    .fail(function(data) {
+      console.log( "error" );
+      console.log(data);
+  });
+   
+}
 
 
+// function displayDate() {
+//   document.getElementById("myBtn").innerHTML = Date();
+// }
