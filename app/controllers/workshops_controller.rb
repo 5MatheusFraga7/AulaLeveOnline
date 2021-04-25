@@ -26,7 +26,6 @@ class WorkshopsController < ApplicationController
 
 	end
 
-
 	def create_workshops
 
 		status = ''
@@ -106,6 +105,7 @@ class WorkshopsController < ApplicationController
 
 
 					else
+						
 						status = 'destroy_error'
 
 					end

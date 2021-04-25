@@ -3,6 +3,7 @@ $(document).ready(function(){
 
   // document.getElementById("myBtn").addEventListener("click", displayDate);
 
+
 })	
 
 function editWorkshop(workshop_id, type_edition) {
@@ -28,6 +29,10 @@ function goTocreateWorkshops() {
 	window.location.href = 'create_workshops';
 }
 
+function goTolistWorkshops() {
+  window.location.href = 'list_workshops';
+}
+
 function removeWorkshop(workshop_id) {
 
    $.ajax("workshops/remove.json?workshop_id="+workshop_id)
@@ -45,3 +50,7 @@ function removeWorkshop(workshop_id) {
 // function displayDate() {
 //   document.getElementById("myBtn").innerHTML = Date();
 // }
+
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus');
+  })
