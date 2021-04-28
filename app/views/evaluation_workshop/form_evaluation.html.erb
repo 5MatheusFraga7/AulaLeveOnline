@@ -1,0 +1,52 @@
+
+	
+<div class="container">
+	<div class="jumbotron jumbotron-fluid">
+		<div class="observation-workshops-evaluation"> 
+			<span> Oficina: <%=  @workshop.observation %> </span> 
+			<input type="hidden" id="workshop_hash" value="<%=  @workshop.hash_evaluation %>">
+		</div>		
+	</div>
+
+
+	<div class="jumbotron jumbotron-fluid">
+		<div class="observation-workshops-evaluation"> 
+		      <label for="observation_input">Nome</label>
+		      <div class="col-sm-8">
+			      <input name = "student_name" type="text" class="form-control inputs_note" id="student_name" placeholder="Nome" required>
+			      <div class="valid-feedback">
+			        Correto!
+			      </div>
+		      </div>
+
+		      <label for="observation_input">Email</label>
+		      <div class="col-sm-8">
+			      <input name = "student_email" type="email" class="form-control inputs_note" id="student_email" placeholder="Email" required>
+			      <div class="valid-feedback">
+			        Correto!
+			      </div>
+		      </div>
+
+		      <label for="observation_input">Observação(Opcional)</label>
+		      <div class="col-sm-8">
+			      <textarea name = "observation" type="text" class="form-control inputs_note" id="student_observation" placeholder="Observação(Opcional)" required></textarea> 
+			      <div class="valid-feedback">
+			        Correto!
+			      </div>
+		      </div>
+		</div>		
+	</div>	
+
+	<div class="jumbotron jumbotron-fluid">
+		<div class="observation-workshops-evaluation"> 
+			<span> Nota para a oficina: </span><br><br>
+		    <% for i in 1..10 %>	  
+			       <button class="btn btn-secondary buttons_notes" id = "buton_note<%=i%>" onclick="setNoteforWorkshop(<%=i%>);"><%=i%></button>
+		    <% end %> 
+
+		    <input type="hidden" name="note_for_workshop" id="note_for_workshop">
+		</div><br><br>
+
+		<center><button class="btn btn-success" id = "send_evaluation" onclick="sendEvaluation();">Enviar</button></center>		
+	</div>
+</div>
