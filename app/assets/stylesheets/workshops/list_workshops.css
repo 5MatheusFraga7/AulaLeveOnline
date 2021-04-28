@@ -17,3 +17,130 @@
 .go_to_create_workshops:hover {
     background-color: #6cc19e;
 }
+
+.container-workshop-statistics {
+    height: 400px;
+    width: 900px;
+    margin-top: 246px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 21px;
+
+}
+
+#grafics-title-subject {
+    height: 20px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 21px;
+
+}
+
+#grafics-title {
+    height: 20px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#grafics-design-container {
+    height: auto;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 21px;
+
+}
+
+#grafics-design {
+    height: 159px;
+    position: relative;
+    width: 82%;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 21px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 66px;
+}
+
+#evaluation {
+
+}
+
+.grafics-container {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    padding: 20px;
+}
+
+#link-to-evaluation {
+    height: auto;
+    position: relative;
+    width: auto;
+    text-align: center;
+    font-size: 22px;
+    background-color: #55d4e7;
+    border-radius: 21px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 15px;
+    padding: 8px;
+
+}
+
+#evaluation-label {
+    height: 61px;
+    position: relative;
+    width: 82%;
+    text-align: center;
+    font-size: 22px;
+    background-color: #81ff84;
+    border-radius: 21px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 66px;
+    padding: 15px;  
+
+}
+
+#media-label {
+    height: 40px;
+    position: relative;
+    width: 82%;
+    text-align: center;
+    font-size: 19px;
+    margin-left: 66px; 
+    margin-bottom: 24px; 
+}
+
+#stars-label-media {
+    height: 61px;
+    position: relative;
+    width: 82%;
+    text-align: center;
+    font-size: 19px;
+    margin-left: 66px; 
+    background-color: #55d4e7;
+
+  
+}
+.back_button {
+    margin-left: 66px; 
+    font-weight: 700;
+
+}
+.stars-media {
+    position: relative;
+    width: 272px;
+    height: 138px;
+    bottom: 34px;
+    margin-top: -41px;
+}

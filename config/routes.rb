@@ -23,7 +23,12 @@ Rails.application.routes.draw do
 	get 'workshops/create',  to: 'workshops#create_workshops'
 	get 'workshops/remove',  to: 'workshops#remove_workshops'
 
+	get 'workshops/get_workshop_statistics',  to: 'workshops#get_workshop_statistics'
+
+
 	get '/evaluation/:workshop',  to: 'evaluation_workshop#index'
+	get 'evaluation/evaluation/create',  to: 'evaluation_workshop#create_evaluation'
+
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

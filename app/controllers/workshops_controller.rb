@@ -136,4 +136,48 @@ class WorkshopsController < ApplicationController
 
 	end
 
+	def get_workshop_statistics
+
+		status        = ''
+		workshop_json = ''
+
+		if params[:workshop_id].present?
+
+			workshop = Workshop.where(id:params[:workshop_id]).first
+
+			if (workshop.present?)
+
+				if (workshop.user_id == current_user.id)
+
+					workshop_json = workshop
+					status        = 'success'
+
+
+				else
+
+					status = 'no_permission_remove_workshop'
+
+					
+				end
+
+			else
+
+				status = 'missing_workshop'
+
+
+			end
+
+		else
+
+			status = 'missing_parameters'
+
+		end
+
+		data = { status: status, workshop: workshop_json }
+
+		respond_with(data)	
+	end
+
+
+
 end

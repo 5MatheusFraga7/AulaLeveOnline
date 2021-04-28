@@ -1,5 +1,3 @@
-var x = '';
-
 (function() {
   'use strict';
   window.addEventListener('load', function() {
@@ -34,7 +32,7 @@ function saveNewWorkshop() {
 
       if (data.status == "success") {
 
-        // _this.DrawModalResponse(data.status);
+         console.log(data.status);
 
       }   
 
@@ -46,34 +44,43 @@ function saveNewWorkshop() {
 
 }
 
+function setNoteforWorkshop(note) {
 
-// function DrawModalResponse(status) {
+    document.getElementById("note_for_workshop").value = note;
 
-//   var container    = $('<div/>', { class: 'container' }); 
+    $('.buttons_notes').prop('disabled', true);
 
-//   var modal        = $('<div/>', { class: 'modal fade', id: 'myModal', role: 'dialog' }); 
-//   var modal_dialog = $('<div/>', { class: 'modal-dialog' }); 
-  
-//   var modal_header = $('<div/>', { class: 'modal-header' }); 
-//   var button_close = $('<div/>', { class: 'close' }); 
-//   var modal_title  = $('<h4/>',  { class: 'modal-title' }); 
-  
-//   var modal_body   = $('<h4/>',  { class: 'modal-body' }); 
-//   var modal_footer = $('<h4/>',  { class: 'modal-footer' }); 
+    $('#buton_note'+note).css("background-color", "red");
 
-//   var button_close_default = $('<div/>', { class: 'btn btn-default', value: 'Close' }); 
-  
-//   container.append(modal);
-//   modal.append(modal_dialog);
+}
 
-//   modal_dialog.append(modal_header);
-//   modal_header.append(button_close);
-//   modal_header.append(modal_title);
 
-//   modal_dialog.append(modal_body);
-//   modal_dialog.append(modal_footer);
-//   modal_footer.append(button_close_default);
+function sendEvaluation() {
 
-//   $(".container_form_workshops").append(container);
+   $('#send_evaluation').prop('disabled', true);
+      
+   var workshop_hash       = document.getElementById("workshop_hash").value;
+   var student_name        = document.getElementById("student_name").value;
+   var student_email       = document.getElementById("student_email").value;
+   var student_observation = document.getElementById("student_observation").value;
+   var note_for_workshop   = document.getElementById("note_for_workshop").value;
 
-// }
+   $.ajax("evaluation/create.json?workshop_hash=" +workshop_hash+"&student_name="+student_name+"&student_email="+student_email+"&student_observation="+student_observation+"&note_for_workshop="+note_for_workshop)
+        .done(function(data) {
+
+          if (data.status == "success") {
+
+            alert("Sua avaliação, foi salva!");
+
+          } else if (data.status == "missing_parameters") {
+
+             alert("Para enviar sua avaliação, selecione os campos de nome, nota e email!");
+          } 
+
+          })
+        .fail(function(data) {
+          console.log( "error" );
+          console.log(data.status);
+        }
+   );  
+}
