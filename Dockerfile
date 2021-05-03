@@ -12,6 +12,7 @@ RUN bundle install
 
 COPY . .
 
+RUN rake db:schema:load
 RUN rake db:migrate
 RUN rake db:seed
 
