@@ -19,15 +19,31 @@ function editWorkshop(workshop_id, type_edition) {
 
 function removeWorkshop(workshop_id) {
 
+  var _this = this;
+
    $.ajax("workshops/remove.json?workshop_id="+workshop_id)
     .done(function(data) {
-      console.log(data);   
+
+        console.log(data);
+
+        if (data == 'success') {
+
+            // _this.updateWorkshopsList(data.user_id);
+        }
+
       })
+
     .fail(function(data) {
       console.log( "error" );
       console.log(data);
   });
    
+}
+
+function updateWorkshopsList(user_id) {
+
+  
+
 }
 
 function getWorkshopStatistics(workshop_id) {

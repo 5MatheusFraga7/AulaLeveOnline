@@ -16,9 +16,7 @@ class WorkshopsController < ApplicationController
 
 	def list_workshops
 
-		 
-
-		@workshops = Workshop.where(user_id:current_user.id)
+		@workshops = Workshop.where(user_id:current_user.id).where("removed_at is null")
 
 		puts @workshops.inspect
 
@@ -87,7 +85,7 @@ class WorkshopsController < ApplicationController
 
 	def remove_workshops
 
-		status = ''
+		status   = ''
 
 		if params[:workshop_id].present?
 
@@ -97,17 +95,17 @@ class WorkshopsController < ApplicationController
 
 				if (workshop.user_id == current_user.id)
 
-					workshop.destroy
+					workshop.removed_at = Time.now
 
 					if workshop.save
 
-						status = 'success'
-
+						status = 'success'						
 
 					else
-						
-						status = 'destroy_error'
 
+						status = 'saving_error'
+
+						
 					end
 
 				else
@@ -130,7 +128,7 @@ class WorkshopsController < ApplicationController
 
 		end
 
-		data = { status: status }
+		data = { status: status, user_id: current_user.id }
 
 		respond_with(data)		
 

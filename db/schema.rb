@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210425024315) do
+ActiveRecord::Schema.define(version: 20210510025537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20210425024315) do
     t.decimal  "note"
     t.string   "matter"
     t.text     "hash_evaluation"
+    t.datetime "removed_at"
     t.index ["estado_id"], name: "index_workshops_on_estado_id", using: :btree
     t.index ["types_institution_id"], name: "index_workshops_on_types_institution_id", using: :btree
     t.index ["user_id"], name: "index_workshops_on_user_id", using: :btree
