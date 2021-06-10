@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 })	
 
-
 function showHoverImg(index_img) {
 
 	if ( index_img == 1 ) {

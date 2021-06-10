@@ -7,7 +7,7 @@
       <div class="login_form_container">
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        
+            <%= render "devise/shared/error_messages", resource: resource %>        
             <div class="user_login_container">
                 <label class="user_login" id = "user_login" ><%= image_tag "Icon-user.png", :class => "user_login" %></label>  
             </div>
@@ -47,8 +47,6 @@
     </body>
 
   </html>
-
-
 
 
 
