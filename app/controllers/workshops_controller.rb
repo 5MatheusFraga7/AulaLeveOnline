@@ -18,8 +18,6 @@ class WorkshopsController < ApplicationController
 
 		@workshops = Workshop.where(user_id:current_user.id).where("removed_at is null")
 
-		puts @workshops.inspect
-
 		render file: "#{Rails.root}/app/views/workshops/list_workshops.html.erb"
 
 	end

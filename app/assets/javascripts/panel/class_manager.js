@@ -2,6 +2,8 @@ $(document).ready(function(){
 
 	$("#video_1").fadeIn();
 
+
+
 })	
 
 function showHoverImg(index_img) {
@@ -159,4 +161,27 @@ function showVideo(video) {
 		$("#video_1").fadeIn();			
 	}
 
+}
+
+function setModalItems() {
+
+  var modal = document.getElementById("myModal");
+  var btn   = document.getElementById("myBtn");
+  var span  = document.getElementsByClassName("close")[0];
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+}
+
+function setErrorMessageModal(message) {
+	$(".errors_message").text(message);
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
   <html>
-    <head>
-    </head>
-
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
     <body id = "body_login">
       <div class="login_form_container">
-
+ 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <%= render "devise/shared/error_messages", resource: resource %>        
+          <%= render "devise/shared/error_messages", resource: resource %> 
             <div class="user_login_container">
                 <label class="user_login" id = "user_login" ><%= image_tag "Icon-user.png", :class => "user_login" %></label>  
             </div>
@@ -38,12 +38,13 @@
             </div> 
 
             <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-              <%= link_to "Esqueceu sua senha ?", new_password_path(resource_name), class: 'register_new_user' %><br />
+
             <% end %>                        
 
         <% end %>
 
-      </div>
+      </div>      
+
     </body>
 
   </html>

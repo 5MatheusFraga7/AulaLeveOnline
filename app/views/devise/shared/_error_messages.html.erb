@@ -1,33 +1,49 @@
 
 <% if resource.errors.any? %>
+   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
 
-    <script type="text/javascript">
-      
-      $(".login_form_container").hide();
-      
-      alert(
+    <div id="myModal" class="modal">
+      <div class="modal-content" style="height: 125px; width: 40%;">
+        <span class="close" style="position: absolute; right: 0%; font-size: 31px; color: red; width: 30px; margin-left: 5px; margin-right: 5px;">&times;</span>
+        <span style ="position: absolute; margin-top: 4px; font-weight: 600; margin-bottom: 50px; height: 20px;">
+            Erro ao criar cadastro</span>
+        <p class="errors_message" style = "position: absolute; top: 49%;" >Algo inesperado ocorreu, tente novamente!</p>
+      </div>
+    </div>
 
-          <% if resource.errors.messages[:password_confirmation].present? %>
+  </body>
 
-             "<%= resource.errors.messages[:password_confirmation].first.to_s %>"
+  <script type="text/javascript">
 
-          <% elsif resource.errors.messages[:password].present? %>
+    setModalItems(); 
 
-             "<%= resource.errors.messages[:password].first %>"
+    setErrorMessageModal(
 
-          <% elsif resource.errors.messages[:email].present? %>
+        <% if resource.errors.messages[:password_confirmation].present? %>
 
-            "<%= resource.errors.messages[:email].first %>"
+           "<%= resource.errors.messages[:password_confirmation].first.to_s %>"
 
-           <% else %>
-             
-              <% resource.errors.full_messages.each do |message| %>
-               "<%= message %>"
-              <% end %>
+        <% elsif resource.errors.messages[:password].present? %>
 
-          <% end %>  
+           "<%= resource.errors.messages[:password].first %>"
 
-        );
-    </script>
+        <% elsif resource.errors.messages[:email].present? %>
+
+          "<%= resource.errors.messages[:email].first %>"
+
+         <% else %>
+           
+            <% resource.errors.full_messages.each do |message| %>
+             "<%= message %>"
+            <% end %>
+
+        <% end %>  
+
+    );
+  </script>
 
 <% end %>
+

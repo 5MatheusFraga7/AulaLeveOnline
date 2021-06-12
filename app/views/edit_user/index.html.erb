@@ -1,0 +1,28 @@
+<%= render file:  "#{Rails.root}/app/views/home/navbar_padrao.html.erb" %>
+<%= csrf_meta_tags %>
+<div class="edit_form_container">
+	
+	<label class="login_form_label">Nome</label>
+	<input type="text" class = "login_form_inputs" id = "form_input_name" value = "<%= current_user.username %>">
+
+	<label class="login_form_label">E-mail</label>
+	<input type="email" class = "login_form_inputs" id = "form_input_email"  value = <%= current_user.email %>>
+
+	<button class="btn btn-success pull-right" id = "update_data_user" type="button" onclick="sendUpdateDataUser()"> Salvas novos dados</button>	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
