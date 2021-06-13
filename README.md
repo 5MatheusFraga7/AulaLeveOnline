@@ -2,18 +2,18 @@
 
 Esta aplicação utiliza Ruby on Rails, então sga os passos a baixo para fazer o arquivo rodar em distribuições linux.
 
-1) Baixar o Gerenciador
-
-  # Rode os comandos para baixar o rmv(Gerenciador de versões do ruby):
+  # 1) Baixar o Gerenciador 
+  
+  Rode os comandos para baixar o rmv(Gerenciador de versões do ruby):
 
   sudo apt-get --assume-yes update  
   command curl -sSL https://rvm.io/mpapis.asc | gpg --import -  
   curl -L https://get.rvm.io | bash -s stable  
   source ~/.rvm/scripts/rvm 
   
-2) Baixar o Ruby 
+ # 2) Baixar o Ruby 
 
-  # Rode os comandos para baixar o ruby e o Rails
+ Rode os comandos para baixar o ruby e o Rails
   
    rvm install 2.5.7p206
    rvm use 2.5.7p206 --default  
@@ -23,11 +23,11 @@ Esta aplicação utiliza Ruby on Rails, então sga os passos a baixo para fazer 
    
 
 
-3) Instalando as gems
+ # 3) Instalando as gems
 
     bundle install
 
-4) Configurar o banco
+ # 4) Configurar o banco
 
     Caso dê erro, lembre-se de entrar na pasta do projeto e de rodar o comando source /etc/profile.d/rvm.sh
     
@@ -37,7 +37,7 @@ Esta aplicação utiliza Ruby on Rails, então sga os passos a baixo para fazer 
     rake db:migrate
     rake db:seed
     
-5) Rode o servidor:
+ # 5) Rode o servidor:
    
    rails s
    
