@@ -1,15 +1,49 @@
+
 <% if resource.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= I18n.t("errors.messages.not_saved",
-                 count: resource.errors.count,
-                 resource: resource.class.model_name.human.downcase)
-       %>
-    </h2>
-    <ul>
-      <% resource.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
+   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content" style="height: 125px; width: 40%;">
+        <span class="close" style="position: absolute; right: 0%; font-size: 31px; color: red; width: 30px; margin-left: 5px; margin-right: 5px;">&times;</span>
+        <span style ="position: absolute; margin-top: 4px; font-weight: 600; margin-bottom: 50px; height: 20px;">
+            Erro ao criar cadastro</span>
+        <p class="errors_message" style = "position: absolute; top: 49%;" >Algo inesperado ocorreu, tente novamente!</p>
+      </div>
+    </div>
+
+  </body>
+
+  <script type="text/javascript">
+
+    setModalItems(); 
+
+    setErrorMessageModal(
+
+        <% if resource.errors.messages[:password_confirmation].present? %>
+
+           "<%= resource.errors.messages[:password_confirmation].first.to_s %>"
+
+        <% elsif resource.errors.messages[:password].present? %>
+
+           "<%= resource.errors.messages[:password].first %>"
+
+        <% elsif resource.errors.messages[:email].present? %>
+
+          "<%= resource.errors.messages[:email].first %>"
+
+         <% else %>
+           
+            <% resource.errors.full_messages.each do |message| %>
+             "<%= message %>"
+            <% end %>
+
+        <% end %>  
+
+    );
+  </script>
+
 <% end %>
+

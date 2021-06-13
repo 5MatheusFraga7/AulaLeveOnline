@@ -1,0 +1,22 @@
+<nav>
+	<input type="checkbox" id="check">
+	<label for="check" class="checkbtn">
+		<i class="fas fa-bars"></i>
+	</label>
+
+	<label class="logo" id = "home" >
+
+		<%= link_to home_path do %>
+				<%= image_tag "LogoAtualizadoDef.png", class: "home_logo" %>
+		<% end %>
+
+	</label>
+	<ul>
+		<li><%= link_to 'Início', home_path%></li>
+		<li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
+		<li><%= link_to 'Usuário', edit_user_path%></li>
+		<li><%= link_to 'Oficinas', list_workshops_path%></li>
+	</ul>
+</nav>
+
+

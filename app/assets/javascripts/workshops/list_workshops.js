@@ -19,15 +19,43 @@ function editWorkshop(workshop_id, type_edition) {
 
 function removeWorkshop(workshop_id) {
 
+  var _this = this;
+
    $.ajax("workshops/remove.json?workshop_id="+workshop_id)
     .done(function(data) {
-      console.log(data);   
+
+        console.log(data);
+
+        setModalItems();
+
+        if (data.status == 'success') {
+
+          setTitleModal("Removida!");        
+          setErrorMessageModal("Oficina removida!");
+
+          clearWorkshop(workshop_id);
+
+        }
+        else {
+
+          setTitleModal("Erro!");        
+          setErrorMessageModal("Não foi possível remover oficina! "+data.status);  
+
+        }
+
       })
+
     .fail(function(data) {
-      console.log( "error" );
-      console.log(data);
+      setModalItems();
+      setTitleModal("Erro!");        
+      setErrorMessageModal("Não foi possível remover oficina!"); 
   });
    
+}
+
+function updateWorkshopsList(user_id) {
+
+
 }
 
 function getWorkshopStatistics(workshop_id) {
@@ -88,4 +116,8 @@ function back_button() {
   setTimeout(function(){ 
       $("#tale_list_workshops").fadeIn();
   }, 500);  
+}
+
+function clearWorkshop(workshop_id) {
+  $("#"+workshop_id).fadeOut();
 }

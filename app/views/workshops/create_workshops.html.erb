@@ -5,26 +5,7 @@
 	<title>Oficinas</title>
 </head>
 
-	<nav>
-		<input type="checkbox" id="check">
-		<label for="check" class="checkbtn">
-			<i class="fas fa-bars"></i>
-		</label>
-
-		<label class="logo" id = "home" >
-
-			<%= link_to home_path do %>
-   				<%= image_tag "LogoAtualizadoDef.png", class: "home_logo" %>
-			<% end %>
-
-		</label>
-		<ul>
-			<li><a class="active" href="#">Início</a></li>
-			<li><a><%= link_to 'Sair', destroy_user_session_path, method: :delete %></a></li>
-			<li><a href="#">Serviços</a></li>
-			<li><a href="#">Contato</a></li>
-		</ul>
-	</nav>
+	<%= render file:  "#{Rails.root}/app/views/home/navbar_padrao.html.erb" %>
 
 	<body>
 		
@@ -93,6 +74,16 @@
 				  <button class="btn btn-success pull-right" type="button" onclick="saveNewWorkshop()">Enviar</button>
 				</form>				
 			</div>
+
+		    <div id="myModal" class="modal">
+		      <div class="modal-content" style="height: 125px; width: 40%;">
+		        <span class="close" style="position: absolute; right: 0%; font-size: 31px; color: red; width: 30px; margin-left: 5px; margin-right: 5px;">&times;</span>
+		        <span class = "label_modal_title" style ="position: absolute; margin-top: 4px; font-weight: 600; margin-bottom: 50px; height: 20px;">
+		           </span>
+		        <p class="errors_message" style = "position: absolute; top: 49%;" ></p>
+		      </div>
+		    </div>		
+		    	
 		</div>
 
 	</body>

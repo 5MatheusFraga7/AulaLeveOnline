@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,26 +8,7 @@
 
 </head>
 
-	<nav>
-		<input type="checkbox" id="check">
-		<label for="check" class="checkbtn">
-			<i class="fas fa-bars"></i>
-		</label>
-
-		<label class="logo" id = "home" >
-
-			<%= link_to home_path do %>
-   				<%= image_tag "LogoAtualizadoDef.png", class: "home_logo" %>
-			<% end %>
-
-		</label>
-		<ul>
-			<li><a class="active" href="#">Início</a></li>
-			<li><a><%= link_to 'Sair', destroy_user_session_path, method: :delete %></a></li>
-			<li><a href="#">Serviços</a></li>
-			<li><a href="#">Contato</a></li>
-		</ul>
-	</nav>
+	<%= render file:  "#{Rails.root}/app/views/home/navbar_padrao.html.erb" %>
 
 	<body>
 
@@ -35,25 +18,22 @@
 			<div class="video_picker_container">
 				<div class="controls_video_picker">	
 					<div class="picker introduction-control" onclick = "changeVideoPicker(1)"><h2>1 - Introdução</h2></div>
-					<div class="picker overview-control" onclick = "changeVideoPicker(2)"><h2>2 - Visão geral</h2></div>	
-					<div class="picker tutorial-control" onclick = "changeVideoPicker(3)"><h2>3 - Tutorial</h2></div>	
+					<div class="picker overview-control"     onclick = "changeVideoPicker(2)"><h2>2 - Etapas oficinas</h2></div>	
+					<div class="picker google-meet"          onclick = "changeVideoPicker(3)"><h2>3 - Google Meet </h2></div>	
+					<div class="picker steps-control"        onclick = "changeVideoPicker(4)"><h2>4 - Zoom</h2></div>	
+					<div class="picker change-video"         onclick = "changeVideoPicker(5)"><h2>5 - Editor de PDF</h2></div>	
+					<div class="picker example-pratics"      onclick = "changeVideoPicker(6)"><h2>6 - Exemplo prático</h2></div>	
+
 				</div>				
 			</div>			
-			
+
 			<div class="tutorial_parent_video">
-		      	<div class="videos" id = "video_1">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/gv48bv6tIO8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-					</iframe>			      		
-		      	</div>
-
-		      	<div class="videos" id = "video_2"> 
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/BD0Km-UygIs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>						
-					</iframe>			      		
-		      	</div>
-
-		      	<div class="videos" id = "video_3">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/xXOHqYRAXxk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			      		
-		      	</div>
+			    <% @videos.each do |video| %>	  
+			      	<div class="videos" id = "video_<%= video.id %>">
+						<iframe width="560" height="315" src="<%= video.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						</iframe>			      		
+			      	</div>							       	
+			    <% end %>  
 			</div>
 		</div>		
 

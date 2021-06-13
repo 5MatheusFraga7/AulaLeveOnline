@@ -73,7 +73,9 @@
 #evaluation {
 
 }
-
+#dialog_confirmation {
+    display: none;
+}
 .grafics-container {
     position: relative;
     height: 90%;

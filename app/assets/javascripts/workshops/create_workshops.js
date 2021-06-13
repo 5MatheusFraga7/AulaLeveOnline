@@ -29,17 +29,28 @@ function saveNewWorkshop() {
 
   $.ajax("workshops/create.json?type_institution=" +type_institution+"&observation="+observation+"&ministry_at="+ministry_at+"&matter="+matter+"&institution="+institution+"&state="+state)
     .done(function(data) {
+        clearInputs();
+        setModalItems();
 
-      if (data.status == "success") {
+        if (data.status == "success") {
 
-         console.log(data.status);
+          setTitleModal("Sucesso!");
+          setErrorMessageModal("Oficina inserida com sucesso!");
 
-      }   
+        }  
+        else if (data.status == "missing_parameters") {
+
+          setTitleModal("Erro!");
+          setErrorMessageModal("Faltam dados para criar a oficina!");
+        }
+        else {
+          setTitleModal("Erro!");
+          setErrorMessageModal("Algo deu errado!");          
+        }
 
       })
     .fail(function(data) {
-      console.log( "error" );
-      console.log(data.status);
+
   });
 
 }
@@ -72,6 +83,8 @@ function sendEvaluation() {
 
             alert("Sua avaliação, foi salva!");
 
+            showConfirmationDialogEvaluation();
+
           } else if (data.status == "missing_parameters") {
 
              alert("Para enviar sua avaliação, selecione os campos de nome, nota e email!");
@@ -83,4 +96,12 @@ function sendEvaluation() {
           console.log(data.status);
         }
    );  
+}
+
+function clearInputs() {
+  $(".form-control").val("");
+}
+
+function showConfirmationDialogEvaluation() {
+  // $("#dialog_confirmation").fadeIn();
 }

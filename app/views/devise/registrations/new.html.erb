@@ -1,9 +1,14 @@
 
+
 <div class="login_form_container">
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
+    <div class="field">
+      <%= f.label :username, class: 'login_form_label', value: 'Nome' %><br />
+      <%= f.text_field :username, autofocus: true, autocomplete: "Nome", class: 'login_form_inputs' %>
+    </div>
 
     <div class="field">
       <%= f.label :email, class: 'login_form_label', value: 'E-mail' %><br />
@@ -33,7 +38,11 @@
 
   <% end %>
 
-</div>
+
+
+
+
+
 
 
 
