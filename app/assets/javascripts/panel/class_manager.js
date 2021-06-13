@@ -119,12 +119,19 @@ function showVideo(video) {
 
 	if (video == 1) {
 
-  		$(".introduction-control").addClass("picker-selected");
   		$(".overview-control").removeClass("picker-selected");
-  		$(".tutorial-control").removeClass("picker-selected");
+  		$(".change-video").removeClass("picker-selected");		
+  		$(".google-meet").removeClass("picker-selected");
+  		$(".example-pratics").removeClass("picker-selected");
+  		$(".steps-control").removeClass("picker-selected");
 
-		$("#video_2").fadeOut();
+  		$(".introduction-control").addClass("picker-selected");
+
+		$("#video_2").fadeOut();		
 		$("#video_3").fadeOut();
+		$("#video_4").fadeOut();		
+		$("#video_5").fadeOut();
+		$("#video_6").fadeOut();
 
 		setTimeout(function(){ 
 			$("#video_1").fadeIn();	 
@@ -133,11 +140,19 @@ function showVideo(video) {
 	else if (video == 2) {
 
   		$(".introduction-control").removeClass("picker-selected");
+  		$(".change-video").removeClass("picker-selected");		
+  		$(".google-meet").removeClass("picker-selected");
+  		$(".example-pratics").removeClass("picker-selected");
+  		$(".steps-control").removeClass("picker-selected");
+
   		$(".overview-control").addClass("picker-selected");
-  		$(".tutorial-control").removeClass("picker-selected");		
+
 
 		$("#video_1").fadeOut();		
-		$("#video_3").fadeOut();	
+		$("#video_3").fadeOut();
+		$("#video_4").fadeOut();		
+		$("#video_5").fadeOut();
+		$("#video_6").fadeOut();	
 
 		setTimeout(function(){ 
 			$("#video_2").fadeIn();	 
@@ -146,14 +161,86 @@ function showVideo(video) {
 	else if (video == 3) {
 
   		$(".introduction-control").removeClass("picker-selected");
+  		$(".change-video").removeClass("picker-selected");		
   		$(".overview-control").removeClass("picker-selected");
-  		$(".tutorial-control").addClass("picker-selected");
+  		$(".example-pratics").removeClass("picker-selected");
+  		$(".steps-control").removeClass("picker-selected");
+
+  		$(".google-meet").addClass("picker-selected");
 
 		$("#video_1").fadeOut();		
 		$("#video_2").fadeOut();
+		$("#video_4").fadeOut();		
+		$("#video_5").fadeOut();
+		$("#video_6").fadeOut();
 
 		setTimeout(function(){ 
 			$("#video_3").fadeIn();	 
+		}, 500);
+
+	}
+	else if (video == 4) {
+
+  		$(".introduction-control").removeClass("picker-selected");
+  		$(".change-video").removeClass("picker-selected");		
+  		$(".overview-control").removeClass("picker-selected");
+  		$(".example-pratics").removeClass("picker-selected");
+  		$(".google-meet").removeClass("picker-selected");
+
+  		$(".steps-control").addClass("picker-selected");
+
+		$("#video_1").fadeOut();		
+		$("#video_2").fadeOut();
+		$("#video_3").fadeOut();		
+		$("#video_5").fadeOut();
+		$("#video_6").fadeOut();
+				
+		setTimeout(function(){ 
+			$("#video_4").fadeIn();	 
+		}, 500);
+
+	}
+
+	else if (video == 5) {
+
+  		$(".introduction-control").removeClass("picker-selected");
+  		$(".steps-control").removeClass("picker-selected");		
+  		$(".overview-control").removeClass("picker-selected");
+  		$(".example-pratics").removeClass("picker-selected");
+  		$(".google-meet").removeClass("picker-selected");
+
+  		$(".change-video").addClass("picker-selected");
+
+		$("#video_1").fadeOut();		
+		$("#video_2").fadeOut();
+		$("#video_3").fadeOut();		
+		$("#video_4").fadeOut();
+		$("#video_6").fadeOut();
+				
+		setTimeout(function(){ 
+			$("#video_5").fadeIn();	 
+		}, 500);
+
+	}
+
+	else if (video == 6) {
+
+  		$(".introduction-control").removeClass("picker-selected");
+  		$(".steps-control").removeClass("picker-selected");		
+  		$(".overview-control").removeClass("picker-selected");
+  		$(".change-video").removeClass("picker-selected");
+  		$(".google-meet").removeClass("picker-selected");
+
+  		$(".example-pratics").addClass("picker-selected");
+
+		$("#video_1").fadeOut();		
+		$("#video_2").fadeOut();
+		$("#video_3").fadeOut();		
+		$("#video_4").fadeOut();
+		$("#video_5").fadeOut();
+				
+		setTimeout(function(){ 
+			$("#video_6").fadeIn();	 
 		}, 500);
 
 	}
@@ -185,3 +272,8 @@ function setModalItems() {
 function setErrorMessageModal(message) {
 	$(".errors_message").text(message);
 }
+
+function setTitleModal(message) {
+	$(".label_modal_title").text(message);
+}
+

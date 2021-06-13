@@ -30,3 +30,11 @@ TypesInstitution.create(:code => 'private_intuition',          :title => 'Partic
 TypesInstitution.create(:code => 'state_public_intuition',     :title => 'Pública - Estadual')
 TypesInstitution.create(:code => 'municipal_public_intuition', :title => 'Pública - Municipal')
 TypesInstitution.create(:code => 'federal_public_intuition',   :title => 'Pública - Federal')
+
+
+VideoTutorials.create(:code => 'tutorial_1', :title => 'Video 1', :video_url => "https://www.youtube.com/watch?v=FBRLBHoKTVw")
+VideoTutorials.create(:code => 'tutorial_2', :title => 'Video 2', :video_url => "https://www.youtube.com/watch?v=kxkPF59FPVU")
+VideoTutorials.create(:code => 'tutorial_3', :title => 'Video 3', :video_url => "https://www.youtube.com/watch?v=le6RQdDfSdE")
+VideoTutorials.create(:code => 'tutorial_4', :title => 'Video 4', :video_url => "https://www.youtube.com/watch?v=RyiM3uD3JBc")
+VideoTutorials.create(:code => 'tutorial_5', :title => 'Video 5', :video_url => "https://www.youtube.com/watch?v=2zwwNMT-cV0")
+VideoTutorials.create(:code => 'tutorial_6', :title => 'Video 6', :video_url => "https://www.youtube.com/watch?v=az3wGuzcghc")

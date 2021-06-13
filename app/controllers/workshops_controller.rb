@@ -102,7 +102,6 @@ class WorkshopsController < ApplicationController
 					else
 
 						status = 'saving_error'
-
 						
 					end
 
@@ -116,7 +115,6 @@ class WorkshopsController < ApplicationController
 			else
 
 				status = 'missing_workshop'
-
 
 			end
 
@@ -173,7 +171,5 @@ class WorkshopsController < ApplicationController
 
 		respond_with(data)	
 	end
-
-
 
 end

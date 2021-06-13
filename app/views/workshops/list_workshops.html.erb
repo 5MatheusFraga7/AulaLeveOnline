@@ -20,7 +20,7 @@
 		    </thead>
 		    <tbody>
 			    <% @workshops.each do |workshop| %>	  
-					<tr class="table">
+					<tr class="table" id =  "<%= workshop.id %>">
 						<td>  <%= workshop.observation %> </td>
 						<td>  <%= workshop.ministry_at.to_s(:data_br) %> </td>
 						<td>  <%= workshop.institution %> </td>
@@ -53,5 +53,14 @@
 
 		 	</div>
 	</div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content" style="height: 125px; width: 40%;">
+        <span class="close" style="position: absolute; right: 0%; font-size: 31px; color: red; width: 30px; margin-left: 5px; margin-right: 5px;">&times;</span>
+        <span class = "label_modal_title" style ="position: absolute; margin-top: 4px; font-weight: 600; margin-bottom: 50px; height: 20px;">
+           </span>
+        <p class="errors_message" style = "position: absolute; top: 49%;" ></p>
+      </div>
+    </div>	
 	
 </html>
